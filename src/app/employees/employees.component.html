@@ -1,0 +1,89 @@
+<h4>Employee List</h4>
+
+<li *ngFor="let emp of empArr,let i=index">
+  <p (click)="edit(emp)">
+    <button (click)="deleteButton(i)" type="button">X</button>
+    {{emp.name}} || {{emp.id}}</p>
+</li>
+<input type="text" [(ngModel)]="empObj.id" placeholder="id">
+<input type="text" [(ngModel)]="empObj.name" placeholder="name">
+<button (click)="addButton()" type="button">add</button>
+<button (click)="deleteButtonLast()" type="button">delete</button>
+<div *ngIf="selectedEmployee">
+  <input type="text" [(ngModel)]="selectedEmployee.id" placeholder="id">
+  <input type="text" [(ngModel)]="selectedEmployee.name" placeholder="name">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ul *ngFor="let emp of Employees" (click)="onSelect(emp)">
+  <li>
+    {{emp.id}} || {{emp.name}} || {{emp.mobile}} || {{emp.address}} || {{emp.email}}||<button
+      (click)="fnDeleteEmployees(emp)">X</button>
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="Employee1.name" placeholder="name">
+<input type="text" [(ngModel)]="Employee1.id" placeholder="id">
+<input type="text" [(ngModel)]="Employee1.mobile" placeholder="mobile">
+<input type="text" [(ngModel)]="Employee1.email" placeholder="email">
+<input type="text" [(ngModel)]="Employee1.address" placeholder="address">
+<button (click)="fnAddEmployee()" type="button">Add</button>
+<button (click)="fnDeleteEmployees(Employee1.id)" type="button">Delete</button>
+<input type="text" [(ngModel)]="Employee1.id">
+
+
+<div *ngIf="selectedEmployee">
+  <h2>{{selectedEmployee.name | uppercase}}</h2>
+  <div><span>id:</span>{{selectedEmployee.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedEmployee.name" placeholder="name">
+    </label>
+  </div>
+</div>
+ -->
+
+<!-- <div *ngIf="selectedEmployee">
+
+    <h2>{{Employee.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{Employee.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="Employee.name" placeholder="name">
+      </label>
+    </div>
+  
+  </div>
+  
+  <button (click)="fnAddEmployee()" type="button">Add</button>
+   -->
